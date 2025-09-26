@@ -1,0 +1,47 @@
+/*----------------------------------FUENTES-------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Audiowide&family=Chau+Philomene+One:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-color: rgb(238, 238, 240);
+    margin: 0;
+    height: 100%;
+}
+
+/*------------------------------------MENU-------------------------------*/
+
+#containerMenu{
+    background-color: #0088CE;
+    width: 20%;
+    height: 100vh;
+    text-align: center;
+}
+
+#fotoEloyMenu{
+    width: 70%;
+    margin-top: 10vh;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#containerMenu ul{
+    color: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.1vw;
+    line-height: 2vw;
+}
+
+#containerMenu > ul{
+    margin-top: 5vh;
+}
+
+#containerMenu li:hover{
+    cursor: pointer;
+    background-color: rgb(164, 246, 246);
+    color:#0088CE;
+}
