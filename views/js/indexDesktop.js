@@ -18,22 +18,32 @@ document.addEventListener("DOMContentLoaded", function(){
 
     const containerMyCV = document.getElementById("containerMyCV");
     const myCVButton = document.getElementById("myCV");
+
+    const portfolioWebContainer = document.getElementById("backgroundPortfolioWeb");
+    const portfolioWebButton = document.getElementById("webDeveloper");
     
     //Habilitamos el funcionamiento de Quién soy
     
     whoIAmButton.addEventListener("click", function(){
-        //whoIAmContainer.style.display = "block";
-        //containerMyCV.style.display = "none";
         whoIAmContainer.classList.add("visible");
         containerMyCV.classList.remove("visible");
+        portfolioWebContainer.classList.remove("visible");
     });
 
     //Habilitamos el funcionamiento de my CV
 
     myCVButton.addEventListener("click", function(){
-        //containerMyCV.style.display = "block";
-        //whoIAmContainer.style.display = "none";
         containerMyCV.classList.add("visible");
         whoIAmContainer.classList.remove("visible");
+        portfolioWebContainer.classList.remove("visible");
     });
+
+    //Habilitamos el funcionamiento de Portfolio Web
+
+    portfolioWebButton.addEventListener("click", function(){
+        portfolioWebContainer.classList.add("visible");
+        whoIAmContainer.classList.remove("visible");
+        containerMyCV.classList.remove("visible");
+    });
+
 });
