@@ -21,6 +21,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
     const portfolioWebContainer = document.getElementById("backgroundPortfolioWeb");
     const portfolioWebButton = document.getElementById("webDeveloper");
+
+    const portfolioGraphicDesignContainer = document.getElementById("backgroundGraphicDesign");
+    const portfolioGraphicDesignButton = document.getElementById("graphicDesign");
     
     //Habilitamos el funcionamiento de Quién soy
     
@@ -28,6 +31,9 @@ document.addEventListener("DOMContentLoaded", function(){
         whoIAmContainer.classList.add("visible");
         containerMyCV.classList.remove("visible");
         portfolioWebContainer.classList.remove("visible");
+        portfolioGraphicDesignContainer.classList.remove("visible");
+        graphicDesignMenuContainer.classList.remove("visibleDesign");
+        brandsContainer.classList.remove("visibleDesign");
     });
 
     //Habilitamos el funcionamiento de my CV
@@ -36,6 +42,9 @@ document.addEventListener("DOMContentLoaded", function(){
         containerMyCV.classList.add("visible");
         whoIAmContainer.classList.remove("visible");
         portfolioWebContainer.classList.remove("visible");
+        portfolioGraphicDesignContainer.classList.remove("visible");
+        graphicDesignMenuContainer.classList.remove("visibleDesign");
+        brandsContainer.classList.remove("visibleDesign");
     });
 
     //Habilitamos el funcionamiento de Portfolio Web
@@ -44,6 +53,37 @@ document.addEventListener("DOMContentLoaded", function(){
         portfolioWebContainer.classList.add("visible");
         whoIAmContainer.classList.remove("visible");
         containerMyCV.classList.remove("visible");
+        portfolioGraphicDesignContainer.classList.remove("visible");
+        graphicDesignMenuContainer.classList.remove("visibleDesign");
+        brandsContainer.classList.remove("visibleDesign");
     });
 
+    //Habilitamos el funcionamiento de Portfolio Diseño Gráfico
+
+    portfolioGraphicDesignButton.addEventListener("click", function(){
+        portfolioGraphicDesignContainer.classList.add("visible");
+        whoIAmContainer.classList.remove("visible");
+        containerMyCV.classList.remove("visible");
+        portfolioWebContainer.classList.remove("visible");
+        graphicDesignMenuContainer.classList.add("visibleDesign");
+        brandsContainer.classList.remove("visibleDesign");
+    });
+
+    //Habilitamos el funcionamiento del menú del Portfolio Diseño Gráfico
+
+    const brandsContainer = document.getElementById("brands");
+    const brandsButton = document.getElementById("brandsButton");
+    const graphicDesignMenuContainer = document.getElementById("typeDesign");
+    const backButton = document.getElementById("back");
+
+    brandsButton.addEventListener("click", function(){
+        brandsContainer.classList.add("visibleDesign");
+        graphicDesignMenuContainer.classList.remove("visibleDesign");
+    });
+
+    backButton.addEventListener("click", function(){
+        graphicDesignMenuContainer.classList.add("visibleDesign");
+        brandsContainer.classList.remove("visibleDesign");
+    });
+    
 });

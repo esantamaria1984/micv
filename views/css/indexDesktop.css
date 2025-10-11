@@ -208,6 +208,7 @@ body {
 #portfolioWeb a:hover {
     color: black;
     background-color: rgb(249, 204, 0);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
 .row {
@@ -217,6 +218,7 @@ body {
 
 .row div {
     padding: 1em;
+    width: 33%;
 }
 
 iframe {
@@ -229,8 +231,180 @@ iframe {
     flex-direction: column;
     align-items: center;
     margin-top: 3vh;
+    width: 100%;
 }
 
 #contacolor > img {
     width: 25%;
+}
+
+/*----------------------------PORTFOLIO DISEÑO GRÁFICO-------------------------------*/
+
+#backgroundGraphicDesign {
+    position: absolute;
+    top: 4vh;
+    left: 25%;
+    right: 5%;
+    text-align: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#backgroundGraphicDesign.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#portfolioGraphicDesign > h1 {
+    font-family: "Indie Flower", cursive;
+    font-size: 2.2vw;
+    color: #0088CE;
+}
+
+#typeDesign {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#typeDesign.visibleDesign {
+    opacity: 1;
+    visibility: visible;
+}
+
+#typeDesign div {
+    display: flex;
+    flex-direction: row;    
+}
+
+#typeDesign h2 {
+    background-color: #0088CE;
+    color: white;
+    width: 15vw;
+    height: 8vh;
+    margin: 2vh;
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Indie Flower", cursive;
+    font-size: 1.5vw;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#typeDesign h2:hover {
+    color: black;
+    background-color: rgb(249, 204, 0);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+} 
+
+/*----------------------------LOGOTIPOS Y MARCAS-------------------------------*/
+
+#brands {
+    position: absolute;
+    top: 10vh;
+    left: 5%;
+    right: 5%;
+    text-align: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#brands.visibleDesign {
+    opacity: 1;
+    visibility: visible;
+}
+
+#brands > h1 {
+    font-family: "Indie Flower", cursive;
+    font-size: 1.7vw;
+    color: #0088CE;
+}
+
+.rowBrands {
+    display: flex;
+    flex-direction: row;
+}
+
+.rowBrands div {
+    width: 40%;
+    height: 18vh;
+    background-color: white;
+    margin-right: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 3vh;
+}
+
+#america {
+    width: 70%;
+}
+
+#tesoroNatural {
+    width: 55%;
+}
+
+#donPedro {
+    width: 70%;
+}
+
+#amazonia {
+    width: 70%;
+}
+
+#delHuerto {
+    width: 70%;
+}
+
+#naturandina {
+    width: 70%;
+}
+
+#colorDigital {
+    width: 80%;
+}
+
+#healthyFoods {
+    width: 70%;
+}
+
+#cadisa {
+    width: 70%;
+}
+#cadisaNatureEnergy {
+    width: 80%;
+}
+#montanera {
+    width: 90%;
+}
+#JIOMCC {
+    width: 70%;
+}
+
+#back {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 0.8vw;
+    background-color: #0088CE;
+    color: white;
+    padding: 0.5vw;
+    width: 10%;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#back:hover {
+    color: black;
+    background-color: rgb(249, 204, 0);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
