@@ -346,6 +346,24 @@ iframe {
     margin-bottom: 3vh;
 }
 
+.rowBrands div:hover p {
+    opacity: 1;
+}
+
+.rowBrands div:hover img {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.rowBrands p {
+    opacity: 0;
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 1.2vw;
+    color: #0088CE;
+}
+
 #america {
     width: 70%;
 }
