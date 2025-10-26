@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function(){
         portfolioWebContainer.classList.remove("visible");
         graphicDesignMenuContainer.classList.add("visibleDesign");
         brandsContainer.classList.remove("visibleDesign");
+        cardsContainer.classList.remove("visibleDesign");
     });
 
     //Habilitamos el funcionamiento del menú del Portfolio Diseño Gráfico
@@ -74,16 +75,45 @@ document.addEventListener("DOMContentLoaded", function(){
     const brandsContainer = document.getElementById("brands");
     const brandsButton = document.getElementById("brandsButton");
     const graphicDesignMenuContainer = document.getElementById("typeDesign");
-    const backButton = document.getElementById("back");
+    const backButton = document.querySelectorAll(".back");
+
+    const cardsContainer = document.getElementById("cards");
+    const cardsButton = document.getElementById("cardsButton");
+    const cardImage = document.querySelectorAll(".cardImage");
+    const xButton = document.querySelectorAll(".x");
 
     brandsButton.addEventListener("click", function(){
         brandsContainer.classList.add("visibleDesign");
         graphicDesignMenuContainer.classList.remove("visibleDesign");
+        cardsContainer.classList.remove("visibleDesign");
     });
 
-    backButton.addEventListener("click", function(){
-        graphicDesignMenuContainer.classList.add("visibleDesign");
+    cardsButton.addEventListener("click", function(){
+        cardsContainer.classList.add("visibleDesign");
         brandsContainer.classList.remove("visibleDesign");
+        graphicDesignMenuContainer.classList.remove("visibleDesign");
     });
+
+    cardImage.forEach(card => {
+        card.addEventListener("click", function(){
+            const bigImage = this.parentElement.querySelector(".bigImage");
+            bigImage.classList.add("bigImageVisible");
+        });
+    });
+
+    xButton.forEach(x => {
+        x.addEventListener("click", function(){
+            const bigImage = this.closest(".bigImage");
+            bigImage.classList.remove("bigImageVisible");
+        });
+    });
+
+    backButton.forEach(back => {
+        back.addEventListener("click", function(){
+            graphicDesignMenuContainer.classList.add("visibleDesign");
+            brandsContainer.classList.remove("visibleDesign");
+            cardsContainer.classList.remove("visibleDesign");
+        });
+    }); 
     
 });

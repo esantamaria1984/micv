@@ -409,7 +409,7 @@ iframe {
     width: 70%;
 }
 
-#back {
+.back {
     font-family: "Roboto", sans-serif;
     font-weight: 200;
     font-size: 0.8vw;
@@ -421,8 +421,91 @@ iframe {
     border-radius: 8px;
 }
 
-#back:hover {
+.back:hover {
     color: black;
     background-color: rgb(249, 204, 0);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+/*----------------------------TARJETAS-------------------------------*/
+
+#cards {
+    position: absolute;
+    top: 10vh;
+    left: 5%;
+    right: 5%;
+    text-align: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#cards.visibleDesign {
+    opacity: 1;
+    visibility: visible;
+}
+
+#cards > h1 {
+    font-family: "Indie Flower", cursive;
+    font-size: 1.7vw;
+    color: #0088CE;
+}
+
+.rowCards {
+    display: flex;
+    flex-direction: row;
+}
+
+.rowCards > div {
+    width: 40%;
+    height: 25vh;
+    background-color: white;
+    margin-right: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 3vh;
+    cursor: pointer;
+}
+
+.rowCards > div:hover {
+    background-color: #aed9ee;
+}
+
+.cardImage {
+    width: 85%;
+}
+
+.cardImageBig {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(154, 153, 153);
+    width: 100%;
+}
+
+.bigImage {
+    position: absolute;
+    z-index: 4;
+    top: 13vh;
+    left: -1vw;
+    cursor: default;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.bigImage.bigImageVisible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.bigImage > p {
+    color: rgb(154, 153, 153);
+    position: absolute;
+    left: 1vw;
+    font-family: "Indie Flower", cursive;
+    font-size: 1.7vw;
+    margin-top: 0.5vw;
+    cursor: pointer;
 }
